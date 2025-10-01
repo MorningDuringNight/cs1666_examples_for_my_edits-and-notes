@@ -144,7 +144,7 @@ fn move_player(
 
     if transform.translation.x > LEVEL_LEN - (WIN_W / 2. + TILE_SIZE) {
         // Close enough to end of level, move to WinScreen
-        win_event.send(Win);
+        win_event.write(Win);
     }
 }
 

@@ -72,7 +72,7 @@ fn update_loading(
     timed_load: Res<TimedLoad>,
 ) {
     let loaded: usize = loading_assets
-        .iter()
+        .iter() //this map makes an interatir and defines a 1 or zero for unknown
         .map(|a| {
             if asset_server.load_state(a).is_loaded() {
                 1
